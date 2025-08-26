@@ -1,0 +1,59 @@
+@model IEnumerable<Auto_Insurance_System.Models.Payment>
+@{
+	ViewData["Title"] = "Agent • Payments by Policy";
+}
+
+<div class="container py-4">
+	<div class="d-flex align-items-center justify-content-between mb-3">
+		<h2 class="mb-0">Payments by Policy</h2>
+		<a class="btn btn-outline-secondary" asp-action="PaymentsHub">Back</a>
+	</div>
+
+	@if (ViewBag.Error != null)
+	{
+		<div class="alert alert-warning">@ViewBag.Error</div>
+	}
+
+	<div class="card shadow-sm">
+		<div class="card-body">
+			<form method="post" class="row g-3">
+				<div class="col-md-4">
+					<label class="form-label">Policy Id</label>
+					<input class="form-control" name="policyId" type="number" required />
+				</div>
+				<div class="col-12 d-flex gap-2">
+					<button class="btn btn-primary">Get Payments</button>
+					<a class="btn btn-outline-secondary" asp-action="PaymentsHub">Cancel</a>
+				</div>
+			</form>
+
+			@if (Model != null)
+			{
+				<hr />
+				<div class="table-responsive">
+					<table class="table table-hover align-middle mb-0">
+						<thead class="table-light">
+							<tr>
+								<th>Payment Id</th>
+								<th>Amount</th>
+								<th>Status</th>
+								<th>Date</th>
+							</tr>
+						</thead>
+						<tbody>
+						@foreach (var p in Model)
+						{
+							<tr>
+								<td>@p.PaymentId</td>
+								<td>@p.PaymentAmount</td>
+								<td><span class="badge bg-secondary">@p.PaymentStatus</span></td>
+								<td>@p.PaymentDate.ToShortDateString()</td>
+							</tr>
+						}
+						</tbody>
+					</table>
+				</div>
+			}
+		</div>
+	</div>
+</div> 

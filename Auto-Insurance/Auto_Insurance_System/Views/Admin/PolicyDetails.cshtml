@@ -1,0 +1,46 @@
+@model Auto_Insurance_System.Models.Policy
+@{
+	ViewData["Title"] = "Policy Details";
+}
+
+<div class="container py-4 policies-bg">
+	<div class="d-flex align-items-center justify-content-between mb-3">
+		<h2 class="mb-0">Get Policy By ID</h2>
+		<a class="btn btn-outline-secondary" asp-action="PoliciesHub">Back</a>
+	</div>
+
+	<div class="card shadow-sm mb-3">
+		<div class="card-body">
+			<form method="post" class="row g-2">
+				<div class="col-md-4"><input class="form-control" type="number" name="policyId" placeholder="Enter Policy Id" required /></div>
+				<div class="col-md-2"><button class="btn btn-primary w-100" type="submit">Search</button></div>
+			</form>
+			@if (ViewBag.Error != null)
+			{
+				<div class="alert alert-warning mt-3">@ViewBag.Error</div>
+			}
+		</div>
+	</div>
+
+	@if (Model != null)
+	{
+		<div class="card shadow-sm">
+			<div class="card-header bg-light">Policy #@Model.PolicyId</div>
+			<div class="card-body">
+				<div class="row g-3">
+					<div class="col-md-4"><strong>Number:</strong> @Model.PolicyNumber</div>
+					<div class="col-md-8"><strong>Vehicle:</strong> @Model.VehicleDetails</div>
+					<div class="col-md-4"><strong>Coverage:</strong> @Model.CoverageType (@String.Format("{0:N2}", @Model.CoverageAmount))</div>
+					<div class="col-md-4"><strong>Premium:</strong> @String.Format("{0:N2}", @Model.PremiumAmount)</div>
+					<div class="col-md-2"><strong>Start:</strong> @Model.StartDate.ToString("dd-MMM-yyyy")</div>
+					<div class="col-md-2"><strong>End:</strong> @Model.EndDate.ToString("dd-MMM-yyyy")</div>
+					<div class="col-md-3"><strong>Status:</strong> @Model.PolicyStatus</div>
+				</div>
+			</div>
+		</div>
+	}
+</div>
+
+<style>
+.policies-bg{background:#ffffff;} 
+</style> 

@@ -1,0 +1,45 @@
+@model Auto_Insurance_System.Models.Payment
+@{
+	ViewData["Title"] = "Agent • Make Payment";
+}
+
+<div class="container py-4">
+	<div class="d-flex align-items-center justify-content-between mb-3">
+		<h2 class="mb-0">Make Payment</h2>
+		<a class="btn btn-outline-secondary" asp-action="PaymentsHub">Back</a>
+	</div>
+
+	@if (TempData["Success"] != null)
+	{
+		<div class="alert alert-success">@TempData["Success"]</div>
+	}
+	@if (ViewBag.Error != null)
+	{
+		<div class="alert alert-warning">@ViewBag.Error</div>
+	}
+
+	<div class="card shadow-sm">
+		<div class="card-body">
+			<form method="post" class="row g-3">
+				<div class="col-md-4">
+					<label class="form-label">Policy Id</label>
+					<input class="form-control" asp-for="PolicyId" type="number" required />
+				</div>
+				<div class="col-md-4">
+					<label class="form-label">Amount</label>
+					<input class="form-control" asp-for="PaymentAmount" type="number" step="0.01" required />
+					<small class="text-muted">Amount must equal the policy's premium.</small>
+				</div>
+				<input type="hidden" asp-for="PaymentStatus" value="SUCCESS" />
+				<div class="col-md-4">
+					<label class="form-label">Date</label>
+					<input class="form-control" asp-for="PaymentDate" type="date" required />
+				</div>
+				<div class="col-12 d-flex gap-2">
+					<button class="btn btn-primary">Record</button>
+					<a class="btn btn-outline-secondary" asp-action="PaymentsHub">Cancel</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div> 

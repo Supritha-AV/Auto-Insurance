@@ -1,0 +1,73 @@
+@model Auto_Insurance_System.Models.Claim
+@{
+    ViewData["Title"] = "Submit Claim";
+}
+
+<div class="container py-4">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="mb-0">Submit Claim</h2>
+        <a class="btn btn-outline-secondary" asp-action="ClaimsHub">Back</a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-warning">@ViewBag.Error</div>
+    }
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form method="post" class="row g-3">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="col-12">
+                    <label class="form-label">Policy Id</label>
+                    <input class="form-control" type="number" asp-for="PolicyId" required />
+                    <div class="form-text">Enter an existing policy id. Create one first if needed.</div>
+                    <span class="text-danger" asp-validation-for="PolicyId"></span>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Amount</label>
+                    <input class="form-control" type="number" step="0.01" asp-for="ClaimAmount" required />
+                    <span class="text-danger" asp-validation-for="ClaimAmount"></span>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Date</label>
+                    <input class="form-control" type="date" asp-for="ClaimDate" required />
+                    <span class="text-danger" asp-validation-for="ClaimDate"></span>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Status</label>
+                    <select class="form-select" asp-for="ClaimStatus">
+                        <option>OPEN</option>
+                        <option>APPROVED</option>
+                        <option>REJECTED</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="ClaimStatus"></span>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Adjuster Id</label>
+                    <input class="form-control" type="number" asp-for="AdjusterId" required />
+                    <div class="form-text">Enter an existing user id (e.g., an AGENT).</div>
+                    <span class="text-danger" asp-validation-for="AdjusterId"></span>
+                </div>
+
+                <div class="col-12 d-flex gap-2">
+                    <button class="btn btn-primary">Submit</button>
+                    <a class="btn btn-outline-secondary" asp-action="ClaimsHub">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+} 

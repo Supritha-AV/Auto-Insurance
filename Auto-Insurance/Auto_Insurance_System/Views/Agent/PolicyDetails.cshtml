@@ -1,0 +1,44 @@
+@model Auto_Insurance_System.Models.Policy
+@{
+	ViewData["Title"] = "Agent • Policy Details";
+}
+
+<div class="container py-4">
+	<div class="d-flex align-items-center justify-content-between mb-3">
+		<h2 class="mb-0">Policy Details</h2>
+		<a class="btn btn-outline-secondary" asp-action="PoliciesHub">Back</a>
+	</div>
+
+	@if (ViewBag.Error != null)
+	{
+		<div class="alert alert-warning">@ViewBag.Error</div>
+	}
+
+	<div class="card shadow-sm">
+		<div class="card-body">
+			<form method="post" class="row g-3">
+				<div class="col-md-4">
+					<label class="form-label">Policy Id</label>
+					<input class="form-control" name="policyId" type="number" required />
+				</div>
+				<div class="col-12 d-flex gap-2">
+					<button class="btn btn-primary">Get Details</button>
+					<a class="btn btn-outline-secondary" asp-action="PoliciesHub">Cancel</a>
+				</div>
+			</form>
+
+			@if (Model != null)
+			{
+				<hr />
+				<dl class="row">
+					<dt class="col-sm-3">Policy Number</dt><dd class="col-sm-9">@Model.PolicyNumber</dd>
+					<dt class="col-sm-3">Vehicle</dt><dd class="col-sm-9">@Model.VehicleDetails</dd>
+					<dt class="col-sm-3">Coverage</dt><dd class="col-sm-9">@Model.CoverageType</dd>
+					<dt class="col-sm-3">Premium</dt><dd class="col-sm-9">@Model.PremiumAmount</dd>
+					<dt class="col-sm-3">Dates</dt><dd class="col-sm-9">@Model.StartDate.ToShortDateString() - @Model.EndDate.ToShortDateString()</dd>
+					<dt class="col-sm-3">Status</dt><dd class="col-sm-9">@Model.PolicyStatus</dd>
+				</dl>
+			}
+		</div>
+	</div>
+</div> 

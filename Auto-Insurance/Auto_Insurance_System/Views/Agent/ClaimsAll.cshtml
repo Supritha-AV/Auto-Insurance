@@ -1,0 +1,43 @@
+@model IEnumerable<Auto_Insurance_System.Models.Claim>
+@{
+	ViewData["Title"] = "Agent • Claims";
+}
+
+<div class="container">
+	<div class="d-flex align-items-center justify-content-between mb-3">
+		<h2 class="mb-0">Claims</h2>
+		<a class="btn btn-outline-secondary" asp-action="ClaimsHub">Back</a>
+	</div>
+
+	<div class="card shadow-sm">
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-hover align-middle mb-0">
+					<thead class="table-light">
+						<tr>
+							<th>Claim Id</th>
+							<th>Policy</th>
+							<th>Amount</th>
+							<th>Date</th>
+							<th>Status</th>
+							<th>Adjuster</th>
+						</tr>
+					</thead>
+					<tbody>
+					@foreach (var c in Model)
+					{
+						<tr>
+							<td>@c.ClaimId</td>
+							<td>@c.PolicyId</td>
+							<td>@c.ClaimAmount</td>
+							<td>@c.ClaimDate.ToShortDateString()</td>
+							<td><span class="badge bg-secondary">@c.ClaimStatus</span></td>
+							<td>@c.AdjusterId</td>
+						</tr>
+					}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div> 

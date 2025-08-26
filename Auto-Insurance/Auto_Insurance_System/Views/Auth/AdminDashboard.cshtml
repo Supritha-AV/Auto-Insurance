@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+    var username = Context.Session.GetString("UserName");
+}
+
+<div class="container py-4">
+    <h2 class="mb-1">Welcome, @username!</h2>
+    <p class="text-muted">Choose a module to manage.</p>
+
+    @await Html.PartialAsync("~/Views/Shared/_AdminStats.cshtml")
+
+    <div class="row g-4 mt-1">
+        <div class="col-md-4 col-lg-3">
+            <a class="text-decoration-none" asp-controller="Admin" asp-action="UsersHub">
+                <div class="tile card shadow-sm border-0 h-100">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-start">
+                        <div class="icon-circle bg-primary text-white mb-3">👥</div>
+                        <div class="fs-5 fw-bold">Users</div>
+                        <div class="text-muted small">Create ,view,update, delete</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <a class="text-decoration-none" asp-controller="Admin" asp-action="PoliciesHub">
+                <div class="tile card shadow-sm border-0 h-100">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-start">
+                        <div class="icon-circle bg-success text-white mb-3">📑</div>
+                        <div class="fs-5 fw-bold">Policies</div>
+                        <div class="text-muted small">Update, list, delete</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <a class="text-decoration-none" asp-controller="Admin" asp-action="ClaimsHub">
+                <div class="tile card shadow-sm border-0 h-100">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-start">
+                        <div class="icon-circle bg-warning text-dark mb-3">📝</div>
+                        <div class="fs-5 fw-bold">Claims</div>
+                        <div class="text-muted small">Update, list</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <a class="text-decoration-none" asp-controller="Admin" asp-action="PaymentsHub">
+                <div class="tile card shadow-sm border-0 h-100">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-start">
+                        <div class="icon-circle bg-info text-white mb-3">💳</div>
+                        <div class="fs-5 fw-bold">Payments</div>
+                        <div class="text-muted small">List, by policy, update</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <a class="text-decoration-none" asp-controller="Admin" asp-action="TicketsHub">
+                <div class="tile card shadow-sm border-0 h-100">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-start">
+                        <div class="icon-circle bg-danger text-white mb-3">🎫</div>
+                        <div class="fs-5 fw-bold">Tickets</div>
+                        <div class="text-muted small">Assign, resolve, list</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+.icon-circle{ width:46px;height:46px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center; }
+.tile{ transition:transform .15s ease, box-shadow .15s ease; }
+.tile:hover{ transform:translateY(-2px); box-shadow:0 .75rem 1rem rgba(0,0,0,.08)!important; }
+</style>
+
+

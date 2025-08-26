@@ -1,0 +1,45 @@
+@{
+    ViewData["Title"] = "Update Claim Status";
+}
+
+<div class="container py-4">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="mb-0">Update Claim Status</h2>
+        <a class="btn btn-outline-secondary" asp-action="ClaimsHub">Back</a>
+    </div>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-warning">@ViewBag.Error</div>
+    }
+    @if (ViewBag.Success != null)
+    {
+        <div class="alert alert-success">@ViewBag.Success</div>
+    }
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form method="post" class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Claim Id</label>
+                    <input class="form-control" type="number" name="claimId" required />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Status</label>
+                    <select class="form-select" name="status">
+                        <option value="OPEN">OPEN</option>
+                        <option value="APPROVED">APPROVED</option>
+                        <option value="REJECTED">REJECTED</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Adjuster Id (optional)</label>
+                    <input class="form-control" type="number" name="adjusterId" />
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,98 @@
+@model IEnumerable<Auto_Insurance_System.Models.Payment>
+@{
+    ViewData["Title"] = "Manage Payments";
+}
+
+<div class="container-fluid">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="mb-0">Payments</h2>
+        <a class="btn btn-outline-secondary" asp-action="PaymentsHub">Back</a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="row g-2 mb-3">
+                <div class="col-md-3">
+                    <select id="paymentStatusFilter" class="form-select">
+                        <option value="">All Statuses</option>
+                        <option value="SUCCESS">Success</option>
+                        <option value="PENDING">Pending</option>
+                        <option value="FAILED">Failed</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input id="paymentSearch" class="form-control" placeholder="Search by payment id, policy number or amount" />
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped align-middle" id="paymentsTable">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Payment Id</th>
+                            <th>Policy Number</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var p in Model)
+                    {
+                        <tr data-status="@p.PaymentStatus">
+                            <td>@p.PaymentId</td>
+                            <td>
+                                @if (p.Policy != null)
+                                {
+                                    <div>@p.Policy.PolicyNumber</div>
+                                }
+                                else
+                                {
+                                    <div class="text-muted">(Policy Id: @p.PolicyId)</div>
+                                }
+                            </td>
+                            <td>@String.Format("{0:N2}", p.PaymentAmount)</td>
+                            <td>@p.PaymentDate.ToString("dd-MMM-yyyy")</td>
+                            <td><span class="badge @GetPaymentBadge(p.PaymentStatus)">@p.PaymentStatus</span></td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@functions{
+    string GetPaymentBadge(PaymentStatus status)
+    {
+        return status switch
+        {
+            PaymentStatus.SUCCESS => "bg-success",
+            PaymentStatus.PENDING => "bg-warning text-dark",
+            PaymentStatus.FAILED => "bg-danger",
+            _ => "bg-light text-dark"
+        };
+    }
+}
+
+@section Scripts{
+<script>
+    const statusFilter = document.getElementById('paymentStatusFilter');
+    const search = document.getElementById('paymentSearch');
+    const table = document.getElementById('paymentsTable');
+
+    function applyFilters() {
+        const status = statusFilter.value;
+        const q = search.value.toLowerCase();
+        Array.from(table.querySelectorAll('tbody tr')).forEach(r => {
+            const matchStatus = !status || r.getAttribute('data-status') === status;
+            const text = r.innerText.toLowerCase();
+            const matchText = text.includes(q);
+            r.style.display = matchStatus && matchText ? '' : 'none';
+        });
+    }
+    statusFilter.addEventListener('change', applyFilters);
+    search.addEventListener('input', applyFilters);
+</script>
+} 

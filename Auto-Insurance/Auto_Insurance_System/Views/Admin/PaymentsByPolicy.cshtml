@@ -1,0 +1,61 @@
+@model IEnumerable<Auto_Insurance_System.Models.Payment>
+@{
+	ViewData["Title"] = "Payments By Policy";
+}
+
+<div class="container py-4 pay-bg">
+	<div class="d-flex align-items-center justify-content-between mb-3">
+		<h2 class="mb-0">Get Payments By Policy</h2>
+		<a class="btn btn-outline-secondary" asp-action="PaymentsHub">Back</a>
+	</div>
+
+	<div class="card shadow-sm mb-3">
+		<div class="card-body">
+			<form method="post" class="row g-2">
+				<div class="col-md-4"><input class="form-control" type="number" name="policyId" placeholder="Enter Policy Id" required /></div>
+				<div class="col-md-2"><button class="btn btn-primary w-100" type="submit">Search</button></div>
+			</form>
+			@if (ViewBag.Error != null)
+			{
+				<div class="alert alert-warning mt-3">@ViewBag.Error</div>
+			}
+		</div>
+	</div>
+
+	@if (Model != null)
+	{
+		<div class="card shadow-sm">
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table table-hover align-middle">
+											<thead class="table-light">
+						<tr>
+							<th>Payment Id</th>
+							<th>Policy Number</th>
+							<th>Amount</th>
+							<th>Date</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+						<tbody>
+						@foreach (var p in Model)
+						{
+							<tr>
+								<td>@p.PaymentId</td>
+								<td>@(p?.Policy?.PolicyNumber ?? $"(Policy Id: {p.PolicyId})")</td>
+								<td>@String.Format("{0:N2}", p.PaymentAmount)</td>
+								<td>@p.PaymentDate.ToString("dd-MMM-yyyy")</td>
+								<td>@p.PaymentStatus</td>
+							</tr>
+						}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	}
+</div>
+
+<style>
+.pay-bg{background:#ffffff;} 
+</style> 

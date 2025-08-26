@@ -1,0 +1,154 @@
+@model IEnumerable<Auto_Insurance_System.Models.Claim>
+@{
+    ViewData["Title"] = "Claims";
+}
+
+<div class="container-fluid py-3">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="mb-0">Claims</h2>
+        <div class="d-flex gap-2">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#claimModal">Submit Claim</button>
+            <a class="btn btn-outline-secondary" asp-action="Console">Admin Console</a>
+        </div>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="row g-2 mb-3">
+                <div class="col-md-3">
+                    <select id="claimStatusFilter" class="form-select">
+                        <option value="">All Statuses</option>
+                        <option value="OPEN">Open</option>
+                        <option value="APPROVED">Approved</option>
+                        <option value="REJECTED">Rejected</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input id="claimSearch" class="form-control" placeholder="Search by claim id, policy id or adjuster" />
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover align-middle" id="claimsTable">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Claim Id</th>
+                            <th>Policy Id</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Adjuster</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var c in Model.OrderByDescending(x => x.ClaimDate))
+                    {
+                        <tr data-status="@c.ClaimStatus">
+                            <td>@c.ClaimId</td>
+                            <td>@c.PolicyId</td>
+                            <td>@String.Format("{0:N2}", c.ClaimAmount)</td>
+                            <td>@c.ClaimDate.ToString("dd-MMM-yyyy")</td>
+                            <td><span class="badge @GetClaimBadge(c.ClaimStatus)">@c.ClaimStatus</span></td>
+                            <td>@c.AdjusterId</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-success me-1" onclick="openStatus(@c.ClaimId, 'APPROVED')">Approve</button>
+                                <button class="btn btn-sm btn-outline-danger me-1" onclick="openStatus(@c.ClaimId, 'REJECTED')">Reject</button>
+                                <button class="btn btn-sm btn-outline-secondary" onclick="prefillClaim(@c.ClaimId,@c.PolicyId,@c.ClaimAmount,'@c.ClaimDate.ToString("yyyy-MM-dd")',@((int)c.ClaimStatus),@c.AdjusterId)" data-bs-toggle="modal" data-bs-target="#claimModal">Edit</button>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Claim Modal (reuse) -->
+<div class="modal fade" id="claimModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Claim</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body">
+        <form id="claimForm" class="row g-2">
+            <input type="hidden" name="ClaimId" id="ClaimId" />
+            <div class="col-12"><input class="form-control" type="number" name="PolicyId" id="PolicyId" placeholder="Policy Id" required></div>
+            <div class="col-12"><input class="form-control" type="number" step="0.01" name="ClaimAmount" id="ClaimAmount" placeholder="Amount" required></div>
+            <div class="col-12"><input class="form-control" type="date" name="ClaimDate" id="ClaimDate" required></div>
+            <div class="col-12">
+                <select class="form-select" name="ClaimStatus" id="ClaimStatus" required>
+                    <option value="OPEN">OPEN</option>
+                    <option value="APPROVED">APPROVED</option>
+                    <option value="REJECTED">REJECTED</option>
+                </select>
+            </div>
+            <div class="col-12"><input class="form-control" type="number" name="AdjusterId" id="AdjusterId" placeholder="Adjuster Id" required></div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="submitClaimBtn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts{
+<script>
+function prefillClaim(id, policyId, amount, date, status, adjuster){
+  document.getElementById('ClaimId').value=id||'';
+  document.getElementById('PolicyId').value=policyId||'';
+  document.getElementById('ClaimAmount').value=amount||'';
+  document.getElementById('ClaimDate').value=date||'';
+  const sel=document.getElementById('ClaimStatus');
+  sel.value = status===0?'OPEN':status===1?'APPROVED':'REJECTED';
+  document.getElementById('AdjusterId').value=adjuster||'';
+}
+
+function openStatus(id, status){
+  const form=new FormData(); form.append('claimId', id); form.append('status', status);
+  fetch('/Admin/AdminUpdateClaimStatus', {method:'POST', body:form}).then(r=>{
+    if(r.ok){ location.reload(); } else { alert('Failed to update'); }
+  });
+}
+
+// Filters
+const statusFilter = document.getElementById('claimStatusFilter');
+const search = document.getElementById('claimSearch');
+const table = document.getElementById('claimsTable');
+function applyFilters() {
+  const status = statusFilter.value;
+  const q = search.value.toLowerCase();
+  Array.from(table.querySelectorAll('tbody tr')).forEach(r => {
+      const matchStatus = !status || r.getAttribute('data-status') === status;
+      const text = r.innerText.toLowerCase();
+      const matchText = text.includes(q);
+      r.style.display = matchStatus && matchText ? '' : 'none';
+  });
+}
+statusFilter.addEventListener('change', applyFilters);
+search.addEventListener('input', applyFilters);
+
+// Submit/save claim
+const submitClaimBtn=document.getElementById('submitClaimBtn');
+submitClaimBtn.addEventListener('click', async ()=>{
+  const form=new FormData(document.getElementById('claimForm'));
+  const res=await fetch('/Admin/AdminSubmitClaim',{method:'POST', body:form});
+  if(res.ok){ location.reload(); } else { alert('Failed'); }
+});
+</script>
+}
+
+@functions{
+    string GetClaimBadge(ClaimStatus status)
+    {
+        return status switch
+        {
+            ClaimStatus.OPEN => "bg-warning text-dark",
+            ClaimStatus.APPROVED => "bg-success",
+            ClaimStatus.REJECTED => "bg-danger",
+            _ => "bg-light text-dark"
+        };
+    }
+} 

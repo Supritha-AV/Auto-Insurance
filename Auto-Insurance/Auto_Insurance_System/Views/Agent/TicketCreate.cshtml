@@ -1,0 +1,40 @@
+@model Auto_Insurance_System.Models.SupportTicket
+@{
+	ViewData["Title"] = "Agent • Create Ticket";
+}
+
+<div class="container py-4">
+	<div class="d-flex align-items-center justify-content-between mb-3">
+		<h2 class="mb-0">Create Ticket</h2>
+		<a class="btn btn-outline-secondary" asp-action="TicketsHub">Back</a>
+	</div>
+
+	@if (TempData["Success"] != null)
+	{
+		<div class="alert alert-success">@TempData["Success"]</div>
+	}
+	@if (ViewBag.Error != null)
+	{
+		<div class="alert alert-warning">@ViewBag.Error</div>
+	}
+
+	<div class="card shadow-sm">
+		<div class="card-body">
+			<form method="post" class="row g-3">
+				<div class="col-md-4">
+					<label class="form-label">User Id</label>
+					<input class="form-control" asp-for="UserId" type="number" required />
+				</div>
+				<div class="col-md-8">
+					<label class="form-label">Issue Description</label>
+					<input class="form-control" asp-for="IssueDescription" required />
+				</div>
+				<input type="hidden" asp-for="TicketStatus" value="OPEN" />
+				<div class="col-12 d-flex gap-2">
+					<button class="btn btn-primary">Create</button>
+					<a class="btn btn-outline-secondary" asp-action="TicketsHub">Cancel</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div> 

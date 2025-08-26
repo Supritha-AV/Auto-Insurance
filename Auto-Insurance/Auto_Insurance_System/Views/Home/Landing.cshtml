@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Auto Insurance System";
+    ViewBag.FullWidth = true;
+    ViewBag.NoTopPadding = true;
+    ViewBag.BodyClass = "is-landing";
+}
+
+@if (TempData["LoginError"] != null)
+{
+    <div class="alert alert-danger text-center">
+        @TempData["LoginError"]
+    </div>
+}
+
+<section class="hero-banner text-white">
+    <div class="px-3 px-md-4 py-4 py-lg-5">
+        <div class="row align-items-center g-4">
+            <div class="col-12 col-lg-10">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="logo-wrap me-3">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="6" fill="#ffffff"/>
+                            <path d="M5 13c1.5-3.5 4.5-5.5 7-5.5s5.5 2 7 5.5" stroke="#0d6efd" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M5 15h14" stroke="#0d6efd" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="12" cy="10" r="2" fill="#0d6efd"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="display-5 fw-bold m-0">Auto Insurance System</h1>
+                        <p class="lead m-0">Comprehensive claims and policy management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card card-portal h-100">
+                    <div class="card-body">
+                        <div class="portal-icon bg-primary-subtle text-app-primary">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="8" r="3.5" stroke="#0d6efd" stroke-width="2" />
+                                <path d="M5 20c0-3.5 3.5-6 7-6s7 2.5 7 6" stroke="#0d6efd" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h5 class="card-title mt-3">Customer Portal</h5>
+                        <p class="card-text">Access your policies, file claims, and track claim status.</p>
+                        <a class="stretched-link" asp-controller="Auth" asp-action="Login" asp-route-Role="CUSTOMER" aria-label="Login as Customer"></a>
+                        <a class="btn btn-outline-primary w-100" asp-controller="Auth" asp-action="Login" asp-route-Role="CUSTOMER">Login as Customer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-portal h-100">
+                    <div class="card-body">
+                        <div class="portal-icon bg-warning-subtle text-warning">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 5h14v10H5z" stroke="#f0ad4e" stroke-width="2"/>
+                                <path d="M9 19h6" stroke="#f0ad4e" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="12" cy="10" r="2" fill="#f0ad4e"/>
+                            </svg>
+                        </div>
+                        <h5 class="card-title mt-3">Agent Workspace</h5>
+                        <p class="card-text">Manage assigned claims, update statuses, and assist customers.</p>
+                        <a class="stretched-link" asp-controller="Auth" asp-action="Login" asp-route-Role="AGENT" aria-label="Login as Agent"></a>
+                        <a class="btn btn-outline-warning w-100" asp-controller="Auth" asp-action="Login" asp-route-Role="AGENT">Login as Agent</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-portal h-100">
+                    <div class="card-body">
+                        <div class="portal-icon bg-success-subtle text-success">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 7h14v10H5z" stroke="#28a745" stroke-width="2"/>
+                                <path d="M8 10h5M8 13h8" stroke="#28a745" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h5 class="card-title mt-3">Admin Panel</h5>
+                        <p class="card-text">Oversee users, policies, claims, payments, and support tickets.</p>
+                        <a class="stretched-link" asp-controller="Auth" asp-action="Login" asp-route-Role="ADMIN" aria-label="Login as Admin"></a>
+                        <a class="btn btn-success w-100" asp-controller="Auth" asp-action="Login" asp-route-Role="ADMIN">Login as Admin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

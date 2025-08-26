@@ -1,0 +1,44 @@
+@model Auto_Insurance_System.Models.Claim
+@{
+    ViewData["Title"] = "Claim Details";
+}
+
+<div class="container py-4">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="mb-0">Get Claim Details</h2>
+        <a class="btn btn-outline-secondary" asp-action="ClaimsHub">Back</a>
+    </div>
+
+    <div class="card shadow-sm mb-3">
+        <div class="card-body">
+            <form method="post" class="row g-2">
+                <div class="col-md-4">
+                    <input class="form-control" type="number" name="claimId" placeholder="Enter Claim Id" required />
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary w-100" type="submit">Search</button>
+                </div>
+            </form>
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-warning mt-3">@ViewBag.Error</div>
+            }
+        </div>
+    </div>
+
+    @if (Model != null)
+    {
+        <div class="card shadow-sm">
+            <div class="card-header bg-light">Claim #@Model.ClaimId</div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-3"><strong>Policy:</strong> @Model.PolicyId</div>
+                    <div class="col-md-3"><strong>Amount:</strong> @String.Format("{0:N2}", Model.ClaimAmount)</div>
+                    <div class="col-md-3"><strong>Date:</strong> @Model.ClaimDate.ToString("dd-MMM-yyyy")</div>
+                    <div class="col-md-3"><strong>Status:</strong> @Model.ClaimStatus</div>
+                    <div class="col-md-3"><strong>Adjuster:</strong> @Model.AdjusterId</div>
+                </div>
+            </div>
+        </div>
+    }
+</div> 

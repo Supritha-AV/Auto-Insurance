@@ -1,0 +1,41 @@
+@model IEnumerable<Auto_Insurance_System.Models.Payment>
+@{
+	ViewData["Title"] = "Customer • My Payments";
+}
+
+<div class="container">
+	<div class="d-flex align-items-center justify-content-between mb-3">
+		<h2 class="mb-0">My Payments</h2>
+		<a class="btn btn-outline-secondary" asp-action="PaymentsHub">Back</a>
+	</div>
+
+	<div class="card shadow-sm">
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-striped align-middle">
+					<thead class="table-light">
+						<tr>
+							<th>Payment Id</th>
+							<th>Policy</th>
+							<th>Amount</th>
+							<th>Status</th>
+							<th>Date</th>
+						</tr>
+					</thead>
+					<tbody>
+					@foreach (var p in Model)
+					{
+						<tr>
+							<td>@p.PaymentId</td>
+							<td>@p.PolicyId</td>
+							<td>@p.PaymentAmount</td>
+							<td><span class="badge bg-secondary">@p.PaymentStatus</span></td>
+							<td>@p.PaymentDate.ToShortDateString()</td>
+						</tr>
+					}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div> 

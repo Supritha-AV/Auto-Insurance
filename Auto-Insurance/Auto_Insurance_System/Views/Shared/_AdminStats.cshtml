@@ -1,0 +1,61 @@
+@{
+    var activePolicies = ViewBag.ActivePolicies as int? ?? 0;
+    var pendingClaims = ViewBag.PendingClaims as int? ?? 0;
+    var revenueThisMonth = ViewBag.RevenueThisMonth as decimal? ?? 0m;
+    var openTickets = ViewBag.OpenTickets as int? ?? 0;
+}
+
+<div class="row g-3 mb-4">
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 stat-card h-100">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div class="portal-icon bg-success-subtle text-success me-2">📄</div>
+                    <div>
+                        <div class="text-muted small">Active Policies</div>
+                        <div class="fs-2 fw-semibold">@activePolicies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 stat-card h-100">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div class="portal-icon bg-warning-subtle text-warning me-2">⏳</div>
+                    <div>
+                        <div class="text-muted small">Pending Claims</div>
+                        <div class="fs-2 fw-semibold">@pendingClaims</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 stat-card h-100">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div class="portal-icon bg-info-subtle text-info me-2">💰</div>
+                    <div>
+                        <div class="text-muted small">Revenue This Month</div>
+                        <div class="fs-2 fw-semibold">@String.Format(System.Globalization.CultureInfo.GetCultureInfo("en-IN"), "₹{0:N2}", revenueThisMonth)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 stat-card h-100">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div class="portal-icon bg-danger-subtle text-danger me-2">🎫</div>
+                    <div>
+                        <div class="text-muted small">Open Tickets</div>
+                        <div class="fs-2 fw-semibold">@openTickets</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,79 @@
+@model IEnumerable<Auto_Insurance_System.Models.Users>
+@{
+    ViewData["Title"] = "Manage Users";
+}
+
+<div class="container">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="mb-0">Users</h2>
+        <a class="btn btn-outline-secondary" asp-action="UsersHub">Back</a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body no-hscroll">
+            <div class="row g-2 mb-2 align-items-center">
+                <div class="col-md-6 col-lg-4">
+                    <input id="userSearch" class="form-control" placeholder="Search by username or email" />
+                </div>
+                <div class="col-auto">
+                    <button id="searchBtn" class="btn btn-primary">Search</button>
+                </div>
+                <div class="col-12">
+                    <div id="searchFeedback" class="text-danger small d-none">Not found. Provide right details.</div>
+                </div>
+            </div>
+            <div>
+                <table class="table table-hover align-middle mb-0 w-100" id="usersTable">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Id</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var u in Model)
+                    {
+                        <tr>
+                            <td>@u.UserId</td>
+                            <td>@u.Username</td>
+                            <td class="text-break">@u.Email</td>
+                            <td><span class="badge bg-primary">@u.Role</span></td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+<script>
+    const searchInput = document.getElementById('userSearch');
+    const searchBtn = document.getElementById('searchBtn');
+    const table = document.getElementById('usersTable');
+    const feedback = document.getElementById('searchFeedback');
+
+    function applySearch(){
+        const q = searchInput.value.trim().toLowerCase();
+        let matches = 0;
+        Array.from(table.querySelectorAll('tbody tr')).forEach(row => {
+            const text = row.innerText.toLowerCase();
+            const show = q === '' || text.includes(q);
+            row.style.display = show ? '' : 'none';
+            if(show) matches++;
+        });
+        feedback.classList.toggle('d-none', matches > 0);
+    }
+
+    searchBtn.addEventListener('click', applySearch);
+    searchInput.addEventListener('keydown', (e)=>{ if(e.key === 'Enter'){ e.preventDefault(); applySearch(); }});
+</script>
+}
+
+<style>
+.no-hscroll{ overflow-x: hidden; }
+#usersTable td{ word-break: break-word; }
+</style> 

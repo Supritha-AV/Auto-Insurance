@@ -1,0 +1,58 @@
+@model Auto_Insurance_System.Models.Users
+@{
+	ViewData["Title"] = "Agent • Create User";
+}
+
+<div class="container py-4">
+	<div class="d-flex align-items-center justify-content-between mb-3">
+		<h2 class="mb-0">Create User</h2>
+		<a class="btn btn-outline-secondary" asp-action="UsersHub">Back</a>
+	</div>
+
+	@if (TempData["Success"] != null)
+	{
+		<div class="alert alert-success">@TempData["Success"]</div>
+	}
+	@if (ViewBag.Error != null)
+	{
+		<div class="alert alert-warning">@ViewBag.Error</div>
+	}
+
+	<div class="card shadow-sm">
+		<div class="card-body">
+			<form method="post" class="row g-3">
+				<div class="col-12">
+					<label class="form-label">Username</label>
+					<input class="form-control" asp-for="Username" required />
+					<span class="text-danger" asp-validation-for="Username"></span>
+				</div>
+				<div class="col-12">
+					<label class="form-label">Email</label>
+					<input class="form-control" type="email" asp-for="Email" required />
+					<span class="text-danger" asp-validation-for="Email"></span>
+				</div>
+				<div class="col-12">
+					<label class="form-label">Password</label>
+					<input class="form-control" type="password" asp-for="Password" required />
+					<span class="text-danger" asp-validation-for="Password"></span>
+				</div>
+				<div class="col-12">
+					<label class="form-label">Role</label>
+					<select class="form-select" asp-for="Role">
+						<option>AGENT</option>
+						<option>CUSTOMER</option>
+					</select>
+					<span class="text-danger" asp-validation-for="Role"></span>
+				</div>
+				<div class="col-12 d-flex gap-2">
+					<button class="btn btn-primary">Create</button>
+					<a class="btn btn-outline-secondary" asp-action="UsersHub">Cancel</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+	<partial name="_ValidationScriptsPartial" />
+} 

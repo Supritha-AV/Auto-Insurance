@@ -1,0 +1,94 @@
+@model IEnumerable<Auto_Insurance_System.Models.Policy>
+@{
+    ViewData["Title"] = "Manage Policies";
+}
+
+<div class="container-fluid">
+    <h2 class="mb-3">Policies</h2>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="row g-2 mb-3">
+                <div class="col-md-3">
+                    <select id="statusFilter" class="form-select">
+                        <option value="">All Statuses</option>
+                        <option value="ACTIVE">Active</option>
+                        <option value="INACTIVE">Inactive</option>
+                        <option value="RENEWED">Renewed</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input id="policySearch" class="form-control" placeholder="Search by number, vehicle or coverage" />
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped align-middle" id="policiesTable">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Policy Id</th>
+                            <th>Number</th>
+                            <th>Vehicle</th>
+                            <th>Coverage</th>
+                            <th>Premium</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var p in Model)
+                    {
+                        <tr data-status="@p.PolicyStatus">
+                            <td>@p.PolicyId</td>
+                            <td>@p.PolicyNumber</td>
+                            <td>@p.VehicleDetails</td>
+                            <td>@String.Format("{0:N2}", p.CoverageAmount) (@p.CoverageType)</td>
+                            <td>@String.Format("{0:N2}", p.PremiumAmount)</td>
+                            <td>@p.StartDate.ToString("dd-MMM-yyyy")</td>
+                            <td>@p.EndDate.ToString("dd-MMM-yyyy")</td>
+                            <td>
+                                <span class="badge @GetStatusBadge(p.PolicyStatus)">@p.PolicyStatus</span>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@functions{
+    string GetStatusBadge(PolicyStatus status)
+    {
+        return status switch
+        {
+            PolicyStatus.ACTIVE => "bg-success",
+            PolicyStatus.RENEWED => "bg-info",
+            PolicyStatus.INACTIVE => "bg-secondary",
+            _ => "bg-light text-dark"
+        };
+    }
+}
+
+@section Scripts{
+<script>
+    const statusFilter = document.getElementById('statusFilter');
+    const search = document.getElementById('policySearch');
+    const table = document.getElementById('policiesTable');
+
+    function applyFilters() {
+        const status = statusFilter.value;
+        const q = search.value.toLowerCase();
+        Array.from(table.querySelectorAll('tbody tr')).forEach(r => {
+            const matchStatus = !status || r.getAttribute('data-status') === status;
+            const text = r.innerText.toLowerCase();
+            const matchText = text.includes(q);
+            r.style.display = matchStatus && matchText ? '' : 'none';
+        });
+    }
+    statusFilter.addEventListener('change', applyFilters);
+    search.addEventListener('input', applyFilters);
+</script>
+} 

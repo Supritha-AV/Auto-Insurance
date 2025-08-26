@@ -1,0 +1,38 @@
+@{
+	ViewData["Title"] = "Delete Policy";
+}
+
+<div class="container py-4 policies-bg">
+	<div class="d-flex align-items-center justify-content-between mb-3">
+		<h2 class="mb-0 text-danger">Delete Policy</h2>
+		<a class="btn btn-outline-secondary" asp-action="PoliciesHub">Back</a>
+	</div>
+
+	@if (TempData["Success"] != null)
+	{
+		<div class="alert alert-success">@TempData["Success"]</div>
+	}
+	@if (ViewBag.Error != null)
+	{
+		<div class="alert alert-warning">@ViewBag.Error</div>
+	}
+
+	<div class="card shadow-sm">
+		<div class="card-body">
+			<form method="post" class="row g-3">
+				<div class="col-md-4">
+					<label class="form-label">Policy Id</label>
+					<input class="form-control" type="number" name="policyId" placeholder="Enter policy id to delete" required />
+				</div>
+				<div class="col-12">
+					<button class="btn btn-danger">Delete</button>
+					<a class="btn btn-outline-secondary" asp-action="PoliciesHub">Cancel</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<style>
+.policies-bg{background:#ffffff;} 
+</style> 

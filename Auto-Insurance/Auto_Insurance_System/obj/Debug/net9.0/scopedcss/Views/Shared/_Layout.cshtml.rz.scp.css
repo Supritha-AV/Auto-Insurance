@@ -1,0 +1,75 @@
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+#adminSidebar[b-836581nsdf] {
+    width: 80px; /* or 250px if expanded */
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+/* Removed unconditional margin that caused left whitespace on pages without a sidebar */
+/* #mainContent {
+    margin-left: 80px; 
+} */
+
+:root[b-836581nsdf] { --sidebar-w: 240px; }
+
+/* Apply sidebar spacing only when the layout has a sidebar and on desktop */
+@media (min-width: 992px) {
+    .has-sidebar #mainContent[b-836581nsdf] {
+        margin-left: var(--sidebar-w);
+    }
+}
+@media (max-width: 991.98px) {
+    .has-sidebar #mainContent[b-836581nsdf] {
+        margin-left: 0;
+    }
+}
+
+a.navbar-brand[b-836581nsdf] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-836581nsdf] {
+  color: #0077cc;
+}
+
+.btn-primary[b-836581nsdf] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-836581nsdf], .nav-pills .show > .nav-link[b-836581nsdf] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-836581nsdf] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-836581nsdf] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-836581nsdf] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-836581nsdf] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-836581nsdf] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

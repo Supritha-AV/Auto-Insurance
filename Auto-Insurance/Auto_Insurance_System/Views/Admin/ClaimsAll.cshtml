@@ -1,0 +1,75 @@
+@model IEnumerable<Auto_Insurance_System.Models.Claim>
+@{
+    ViewData["Title"] = "All Claims";
+}
+
+<div class="container py-4">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="mb-0">All Claims</h2>
+        <a class="btn btn-outline-secondary" asp-action="ClaimsHub">Back</a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="row g-2 mb-3">
+                <div class="col-md-3">
+                    <select id="statusFilter" class="form-select">
+                        <option value="">All Statuses</option>
+                        <option>OPEN</option>
+                        <option>APPROVED</option>
+                        <option>REJECTED</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input id="q" class="form-control" placeholder="Search claim id, policy id, adjuster" />
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover align-middle" id="tbl">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Claim Id</th>
+                            <th>Policy</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Adjuster</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var c in Model)
+                    {
+                        <tr data-status="@c.ClaimStatus">
+                            <td>@c.ClaimId</td>
+                            <td>@c.PolicyId</td>
+                            <td>@String.Format("{0:N2}", c.ClaimAmount)</td>
+                            <td>@c.ClaimDate.ToString("dd-MMM-yyyy")</td>
+                            <td>@c.ClaimStatus</td>
+                            <td>@c.AdjusterId</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+<script>
+const status = document.getElementById('statusFilter');
+const q = document.getElementById('q');
+const tbl = document.getElementById('tbl');
+function apply(){
+  const s=status.value; const query=q.value.toLowerCase();
+  Array.from(tbl.querySelectorAll('tbody tr')).forEach(r=>{
+    const okS = !s || r.getAttribute('data-status')===s;
+    const okQ = r.innerText.toLowerCase().includes(query);
+    r.style.display = okS && okQ ? '' : 'none';
+  });
+}
+status.addEventListener('change', apply);
+q.addEventListener('input', apply);
+</script>
+} 

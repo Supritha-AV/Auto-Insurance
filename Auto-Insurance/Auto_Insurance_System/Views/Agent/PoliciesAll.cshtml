@@ -1,0 +1,43 @@
+@model IEnumerable<Auto_Insurance_System.Models.Policy>
+@{
+	ViewData["Title"] = "Agent • Policies";
+}
+
+<div class="container">
+	<div class="d-flex align-items-center justify-content-between mb-3">
+		<h2 class="mb-0">Policies</h2>
+		<a class="btn btn-outline-secondary" asp-action="PoliciesHub">Back</a>
+	</div>
+
+	<div class="card shadow-sm">
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-hover align-middle mb-0">
+					<thead class="table-light">
+						<tr>
+							<th>Policy Id</th>
+							<th>Number</th>
+							<th>Vehicle</th>
+							<th>Coverage</th>
+							<th>Premium</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+					@foreach (var p in Model)
+					{
+						<tr>
+							<td>@p.PolicyId</td>
+							<td>@p.PolicyNumber</td>
+							<td>@p.VehicleDetails</td>
+							<td>@p.CoverageType</td>
+							<td>@p.PremiumAmount.ToString("C")</td>
+							<td><span class="badge bg-secondary">@p.PolicyStatus</span></td>
+						</tr>
+					}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div> 

@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Auto_Insurance_System\\Auto_Insurance_System.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AutoInsuranceSystemAPI\\AutoInsuranceSystemAPI.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -1,0 +1,61 @@
+@model Auto_Insurance_System.Models.Payment
+@{
+	ViewData["Title"] = "Make Payment";
+}
+
+<div class="container py-4 pay-bg">
+	<div class="d-flex align-items-center justify-content-between mb-3">
+		<h2 class="mb-0">Make Payment</h2>
+		<a class="btn btn-outline-secondary" asp-action="PaymentsHub">Back</a>
+	</div>
+
+	@if (TempData["Success"] != null)
+	{
+		<div class="alert alert-success">@TempData["Success"]</div>
+	}
+	@if (ViewBag.Error != null)
+	{
+		<div class="alert alert-warning">@ViewBag.Error</div>
+	}
+
+	<div class="card shadow-sm">
+		<div class="card-body">
+			<form method="post" class="row g-3">
+				<div asp-validation-summary="All" class="text-danger"></div>
+				<div class="col-12">
+					<label class="form-label">Policy Id</label>
+					<input class="form-control" asp-for="PolicyId" type="number" required />
+					<span class="text-danger" asp-validation-for="PolicyId"></span>
+				</div>
+				<div class="col-12">
+					<label class="form-label">Amount</label>
+					<input class="form-control" asp-for="PaymentAmount" type="number" step="0.01" required />
+					<span class="text-danger" asp-validation-for="PaymentAmount"></span>
+				</div>
+				<div class="col-12">
+					<label class="form-label">Date</label>
+					<input class="form-control" asp-for="PaymentDate" type="date" required />
+					<span class="text-danger" asp-validation-for="PaymentDate"></span>
+				</div>
+				<div class="col-12">
+					<label class="form-label">Status</label>
+					<select class="form-select" asp-for="PaymentStatus">
+						<option>SUCCESS</option>
+						<option>PENDING</option>
+						<option>FAILED</option>
+					</select>
+					<span class="text-danger" asp-validation-for="PaymentStatus"></span>
+				</div>
+				<div class="col-12 d-flex gap-2">
+					<button class="btn btn-primary">Save</button>
+					<a class="btn btn-outline-secondary" asp-action="PaymentsHub">Cancel</a>
+				</div>
+			</form>
+			<partial name="_ValidationScriptsPartial" />
+		</div>
+	</div>
+</div>
+
+<style>
+.pay-bg{background:#ffffff;} 
+</style> 

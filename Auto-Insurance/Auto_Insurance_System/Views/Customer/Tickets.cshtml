@@ -1,0 +1,41 @@
+@model IEnumerable<Auto_Insurance_System.Models.SupportTicket>
+@{
+    ViewData["Title"] = "Customer • My Tickets";
+}
+
+<div class="container">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="mb-0">My Tickets</h2>
+        <a class="btn btn-outline-secondary" asp-action="TicketsHub">Back</a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Ticket Id</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Created</th>
+                            <th>Resolved</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var t in Model)
+                    {
+                        <tr>
+                            <td>@t.TicketId</td>
+                            <td>@t.IssueDescription</td>
+                            <td><span class="badge @(t.TicketStatus == TicketStatus.OPEN ? "bg-danger" : "bg-success")">@t.TicketStatus</span></td>
+                            <td>@t.CreatedDate.ToString("dd-MMM-yyyy")</td>
+                            <td>@(t.ResolvedDate.HasValue ? t.ResolvedDate.Value.ToString("dd-MMM-yyyy") : "-")</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> 

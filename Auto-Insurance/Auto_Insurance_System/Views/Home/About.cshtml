@@ -1,0 +1,247 @@
+@{
+    ViewData["Title"] = "About · Auto Insurance System";
+    ViewBag.FullWidth = true;
+}
+
+<style>
+    /* Scoped styles for About page */
+    .about-hero {
+        background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 40%, #084298 100%);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+    }
+    .about-hero::after {
+        content: "";
+        position: absolute;
+        right: -10rem;
+        top: -10rem;
+        width: 32rem;
+        height: 32rem;
+        background: radial-gradient(closest-side, rgba(255,255,255,.15), rgba(255,255,255,0));
+        filter: blur(2px);
+        border-radius: 50%;
+    }
+    .about-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+        background: rgba(255,255,255,.12);
+        border: 1px solid rgba(255,255,255,.2);
+        color: #fff;
+        padding: .375rem .75rem;
+        border-radius: 999px;
+        font-size: .875rem;
+        letter-spacing: .02em;
+        backdrop-filter: blur(2px);
+    }
+    .about-card {
+        border: 1px solid #eef1f5;
+        box-shadow: 0 6px 18px rgba(16,24,40,.06);
+        border-radius: 1rem;
+        transition: transform .2s ease, box-shadow .2s ease;
+        background: #fff;
+    }
+    .about-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(16,24,40,.12); }
+
+    .feature-icon {
+        width: 44px; height: 44px;
+        border-radius: .75rem;
+        display: inline-flex; align-items: center; justify-content: center;
+        background: #eef4ff; color: #0d6efd;
+        box-shadow: inset 0 0 0 1px rgba(13,110,253,.15);
+    }
+    .timeline {
+        position: relative;
+        padding-left: 1.75rem;
+    }
+    .timeline::before {
+        content: ""; position: absolute; top: .25rem; bottom: .25rem; left: .5rem; width: 2px; background: #e5e7eb;
+    }
+    .timeline .dot { width: .75rem; height: .75rem; background: #0d6efd; border-radius: 999px; position: absolute; left: .125rem; margin-top: .5rem; }
+
+    .faq-item { border-bottom: 1px solid #eef1f5; }
+    .faq-item:last-child { border-bottom: 0; }
+
+    .cta-banner { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border: 1px solid #edf2f7; }
+
+    /* Page background wrapper */
+    .about-page-bg { background: linear-gradient(180deg, #f6f9ff 0%, #f8fafc 100%); }
+</style>
+<div class="about-page-bg">
+
+<section class="about-hero py-5 py-lg-6 full-bleed">
+    <div class="container-xl">
+        <div class="row align-items-center g-4">
+            <div class="col-12 col-lg-8">
+
+                <h1 class="display-5 fw-bold mb-3">About Auto Insurance System</h1>
+                <p class="lead mb-4 opacity-75">
+                    A modern, secure platform for managing policies, claims, payments, and support—crafted for customers,
+                    agents, and administrators.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-light text-primary fw-semibold" asp-controller="Home" asp-action="Landing">Explore Portals</a>
+                    <a class="btn btn-outline-light" asp-controller="Home" asp-action="Privacy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="about-card h-100 p-4">
+                    <div class="feature-icon mb-3">🔒</div>
+                    <h5 class="fw-semibold mb-2">Security First</h5>
+                    <p class="text-secondary mb-0">Role-based access ensures Admins, Agents, and Customers see exactly what they need—nothing more.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="about-card h-100 p-4">
+                    <div class="feature-icon mb-3">⚡</div>
+                    <h5 class="fw-semibold mb-2">Fast & Responsive</h5>
+                    <p class="text-secondary mb-0">Optimized pages and clean UI components deliver a smooth experience on any device.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="about-card h-100 p-4">
+                    <div class="feature-icon mb-3">📈</div>
+                    <h5 class="fw-semibold mb-2">Operational Insight</h5>
+                    <p class="text-secondary mb-0">Admins get at‑a‑glance metrics across policies, claims, payments, and tickets.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="about-card p-4 p-lg-5 h-100">
+                    <h4 class="fw-semibold mb-3">Who’s it for?</h4>
+                    <div class="row row-cols-1 row-cols-sm-2 g-3">
+                        <div class="col">
+                            <div class="p-3 border rounded-3 h-100">
+                                <div class="small text-uppercase text-secondary mb-1">Customers</div>
+                                <div class="mb-2">View active policies, file claims, and pay securely.</div>
+                                <a class="link-primary small" asp-controller="Auth" asp-action="Login" asp-route-Role="CUSTOMER">Login as Customer</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3 border rounded-3 h-100">
+                                <div class="small text-uppercase text-secondary mb-1">Agents</div>
+                                <div class="mb-2">Manage claims, users, and tickets with clear workflows.</div>
+                                <a class="link-warning small" asp-controller="Auth" asp-action="Login" asp-route-Role="AGENT">Login as Agent</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3 border rounded-3 h-100">
+                                <div class="small text-uppercase text-secondary mb-1">Admins</div>
+                                <div class="mb-2">Oversee users, policies, payments, and system health.</div>
+                                <a class="link-success small" asp-controller="Auth" asp-action="Login" asp-route-Role="ADMIN">Login as Admin</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3 border rounded-3 h-100">
+                                <div class="small text-uppercase text-secondary mb-1">Auditors</div>
+                                <div class="mb-0">Export reports and review historical data for compliance.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-card p-4 p-lg-5 h-100">
+                    <h4 class="fw-semibold mb-3">How it works</h4>
+                    <div class="timeline">
+                        <div class="position-relative ps-4 mb-3">
+                            <div class="dot"></div>
+                            <div class="fw-semibold">Authenticate</div>
+                            <small class="text-secondary">Sign in with your role to access tailored tools.</small>
+                        </div>
+                        <div class="position-relative ps-4 mb-3">
+                            <div class="dot"></div>
+                            <div class="fw-semibold">Take Action</div>
+                            <small class="text-secondary">Create policies, submit or review claims, and manage payments.</small>
+                        </div>
+                        <div class="position-relative ps-4">
+                            <div class="dot"></div>
+                            <div class="fw-semibold">Track & Report</div>
+                            <small class="text-secondary">Monitor statuses and export insights for decision‑making.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="about-card p-4 p-lg-5 h-100">
+                    <h4 class="fw-semibold mb-3">Frequently Asked Questions</h4>
+                    <div class="faq-item py-3">
+                        <button class="btn btn-link text-decoration-none p-0 w-100 text-start d-flex justify-content-between align-items-center" data-faq>
+                            <span class="fw-semibold">Can I switch roles after logging in?</span>
+                            <span class="text-secondary">▼</span>
+                        </button>
+                        <div class="collapse show mt-2" data-faq-panel>
+                            <small class="text-secondary">Yes. Log out and sign back in with the intended role. Each role has unique permissions.</small>
+                        </div>
+                    </div>
+                    <div class="faq-item py-3">
+                        <button class="btn btn-link text-decoration-none p-0 w-100 text-start d-flex justify-content-between align-items-center" data-faq>
+                            <span class="fw-semibold">How are payments handled?</span>
+                            <span class="text-secondary">▼</span>
+                        </button>
+                        <div class="collapse mt-2" data-faq-panel>
+                            <small class="text-secondary">Payments are tracked with clear statuses. Admins can review transactions and monthly revenue.</small>
+                        </div>
+                    </div>
+                    <div class="faq-item py-3">
+                        <button class="btn btn-link text-decoration-none p-0 w-100 text-start d-flex justify-content-between align-items-center" data-faq>
+                            <span class="fw-semibold">What happens if I’m not authorized?</span>
+                            <span class="text-secondary">▼</span>
+                        </button>
+                        <div class="collapse mt-2" data-faq-panel>
+                            <small class="text-secondary">You’ll be redirected to an Access Denied page. Contact an administrator if you require elevated permissions.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="about-card p-4 p-lg-5 cta-banner h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="feature-icon me-3">🚀</div>
+                        <div class="fw-semibold">Get started now</div>
+                    </div>
+                    <p class="text-secondary">Choose your portal and experience a streamlined insurance workflow.</p>
+                    <div class="d-grid gap-2">
+                        <a class="btn btn-primary" asp-controller="Auth" asp-action="Login" asp-route-Role="CUSTOMER">Login as Customer</a>
+                        <a class="btn btn-outline-primary" asp-controller="Auth" asp-action="Login" asp-route-Role="AGENT">Login as Agent</a>
+                        <a class="btn btn-light" asp-controller="Auth" asp-action="Login" asp-route-Role="ADMIN">Login as Admin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<script>
+    // Minimal JS to enhance FAQ toggles
+    document.querySelectorAll('[data-faq]').forEach(function(btn){
+        btn.addEventListener('click', function(){
+            const panel = this.parentElement.querySelector('[data-faq-panel]');
+            document.querySelectorAll('[data-faq-panel]').forEach(p => { if (p !== panel) p.classList.remove('show'); });
+            panel.classList.toggle('show');
+        });
+    });
+</script> 

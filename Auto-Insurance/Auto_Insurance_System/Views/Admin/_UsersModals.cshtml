@@ -1,0 +1,63 @@
+<!-- Create User Modal -->
+<div class="modal fade" id="userCreateModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Create User</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <form id="createForm" class="row g-2">
+            <div class="col-12"><input class="form-control" name="Username" placeholder="Username" required></div>
+            <div class="col-12"><input class="form-control" type="email" name="Email" placeholder="Email" required></div>
+            <div class="col-12"><input class="form-control" type="password" name="Password" placeholder="Password" required></div>
+            <div class="col-12">
+                <select class="form-select" name="Role" required>
+                    <option>ADMIN</option>
+                    <option>AGENT</option>
+                    <option>CUSTOMER</option>
+                </select>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Close</button><button id="createBtn" class="btn btn-primary">Create</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- Update User Modal -->
+<div class="modal fade" id="userUpdateModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Update User</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <form id="updateForm" class="row g-2">
+            <div class="col-12"><input class="form-control" type="number" name="UserId" placeholder="User Id" required></div>
+            <div class="col-12"><input class="form-control" name="Username" placeholder="Username" required></div>
+            <div class="col-12"><input class="form-control" type="email" name="Email" placeholder="Email" required></div>
+            <div class="col-12"><input class="form-control" type="password" name="Password" placeholder="New Password (optional)"></div>
+            <div class="col-12">
+                <select class="form-select" name="Role" required>
+                    <option>ADMIN</option>
+                    <option>AGENT</option>
+                    <option>CUSTOMER</option>
+                </select>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Close</button><button id="updateBtn" class="btn btn-primary">Update</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- Delete User Modal -->
+<div class="modal fade" id="userDeleteModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Delete User</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <form id="deleteForm" class="row g-2">
+            <div class="col-12"><input class="form-control" type="number" name="userId" placeholder="User Id" required></div>
+        </form>
+      </div>
+      <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Close</button><button id="deleteBtn" class="btn btn-danger">Delete</button></div>
+    </div>
+  </div>
+</div> 

@@ -1,0 +1,81 @@
+@model IEnumerable<Auto_Insurance_System.Models.Policy>
+@{
+	ViewData["Title"] = "All Policies";
+}
+
+<div class="container py-4 policies-bg">
+	<div class="d-flex align-items-center justify-content-between mb-3">
+		<h2 class="mb-0">All Policies</h2>
+		<a class="btn btn-outline-secondary" asp-action="PoliciesHub">Back</a>
+	</div>
+
+	<div class="card shadow-sm">
+		<div class="card-body">
+			<div class="row g-2 mb-3">
+				<div class="col-md-3">
+					<select id="status" class="form-select">
+						<option value="">All Statuses</option>
+						<option value="ACTIVE">ACTIVE</option>
+						<option value="INACTIVE">INACTIVE</option>
+						<option value="RENEWED">RENEWED</option>
+					</select>
+				</div>
+				<div class="col-md-4"><input id="q" class="form-control" placeholder="Search policy number, vehicle or coverage" /></div>
+			</div>
+
+			<div class="table-responsive">
+				<table id="tbl" class="table table-hover align-middle">
+					<thead class="table-light">
+						<tr>
+							<th>Policy Id</th>
+							<th>Number</th>
+							<th>Vehicle</th>
+							<th>Coverage</th>
+							<th>Premium</th>
+							<th>Start</th>
+							<th>End</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+					@foreach (var p in Model)
+					{
+						<tr data-status="@p.PolicyStatus">
+							<td>@p.PolicyId</td>
+							<td>@p.PolicyNumber</td>
+							<td>@p.VehicleDetails</td>
+							<td>@p.CoverageType (@String.Format("{0:N2}", p.CoverageAmount))</td>
+							<td>@String.Format("{0:N2}", p.PremiumAmount)</td>
+							<td>@p.StartDate.ToString("dd-MMM-yyyy")</td>
+							<td>@p.EndDate.ToString("dd-MMM-yyyy")</td>
+							<td>@p.PolicyStatus</td>
+						</tr>
+					}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+<script>
+const status=document.getElementById('status');
+const q=document.getElementById('q');
+const tbl=document.getElementById('tbl');
+function apply(){
+	const s=status.value; const query=q.value.toLowerCase();
+	Array.from(tbl.querySelectorAll('tbody tr')).forEach(r=>{
+		const okS=!s || r.getAttribute('data-status')===s;
+		const okQ=r.innerText.toLowerCase().includes(query);
+		r.style.display = okS && okQ ? '' : 'none';
+	});
+}
+status.addEventListener('change', apply);
+q.addEventListener('input', apply);
+</script>
+}
+
+<style>
+.policies-bg{background:#ffffff;} 
+</style> 

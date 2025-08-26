@@ -1,0 +1,46 @@
+@{
+	ViewData["Title"] = "Update Payment Status";
+}
+
+<div class="container py-4 pay-bg">
+	<div class="d-flex align-items-center justify-content-between mb-3">
+		<h2 class="mb-0">Update Payment Status</h2>
+		<a class="btn btn-outline-secondary" asp-action="PaymentsHub">Back</a>
+	</div>
+
+	@if (ViewBag.Success != null)
+	{
+		<div class="alert alert-success">@ViewBag.Success</div>
+	}
+	@if (ViewBag.Error != null)
+	{
+		<div class="alert alert-warning">@ViewBag.Error</div>
+	}
+
+	<div class="card shadow-sm">
+		<div class="card-body">
+			<form method="post" class="row g-3">
+				<div class="col-md-4">
+					<label class="form-label">Payment Id</label>
+					<input class="form-control" type="number" name="paymentId" required />
+				</div>
+				<div class="col-md-4">
+					<label class="form-label">Status</label>
+					<select class="form-select" name="status">
+						<option value="SUCCESS">SUCCESS</option>
+						<option value="PENDING">PENDING</option>
+						<option value="FAILED">FAILED</option>
+					</select>
+				</div>
+				<div class="col-12 d-flex gap-2">
+					<button class="btn btn-primary">Update</button>
+					<a class="btn btn-outline-secondary" asp-action="PaymentsHub">Cancel</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<style>
+.pay-bg{background:#ffffff;} 
+</style> 

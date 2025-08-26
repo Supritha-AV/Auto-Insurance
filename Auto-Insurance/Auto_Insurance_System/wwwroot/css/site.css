@@ -1,0 +1,148 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* Use flex layout so main content stretches to footer */
+body {
+  margin-bottom: 0; /* remove space reserved for absolute footer */
+  overflow-x: hidden; /* prevent horizontal scrollbar */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* Make main wrapper flex child so it grows */
+body > .container,
+body > .container-fluid { flex: 1 0 auto; }
+/* Footer should be in normal flow */
+footer.footer { position: static !important; }
+
+/* Remove accidental top gaps between navbar and first section */
+header + .container > main > section:first-child,
+header + .container-fluid > main > section:first-child,
+header + .container > main > div:first-child,
+header + .container-fluid > main > div:first-child {
+  margin-top: 0 !important;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+/* ---- App Theme Additions ---- */
+:root{
+  --app-primary: #0d6efd;
+  --app-primary-dark: #0a58ca;
+  --app-deep: #0b132b;
+  --app-deep-2: #1c2541;
+  --app-accent: #5bc0be;
+  --app-surface: #f7f9fc;
+}
+
+.bg-app-primary{ background-color: var(--app-deep-2) !important; }
+.text-app-primary{ color: var(--app-primary) !important; }
+/* Removed global body gradient; keep minimal hero backgrounds */
+.bg-white-50{ background-color: rgba(255,255,255,0.6); }
+
+.btn-app-primary{
+  background: var(--app-primary);
+  color:#fff;
+  border:1px solid var(--app-primary-dark);
+}
+.btn-app-primary:hover{ background: var(--app-primary-dark); color:#fff; }
+
+/* Header badge/icon */
+.icon-circle{
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* Hero sections */
+.hero-section{ background: linear-gradient(135deg, #1c2541 0%, #3a506b 50%, #0b132b 100%); border-bottom: 1px solid rgba(255,255,255,0.1); }
+.hero-section-minimal{ background: linear-gradient(135deg, #1c2541 0%, #3a506b 70%, #1c2541 100%); }
+.hero-badge{ background: rgba(255,255,255,0.08); border-radius: 12px; padding: 16px; display:flex; align-items:center; justify-content:center; }
+.hero-badge .icon-circle{ width: 56px; height: 56px; font-weight:700; }
+
+/* New full-width hero banner */
+.hero-banner{ width:100vw; margin-left:calc(50% - 50vw); background: linear-gradient(90deg, #1c2541 0%, #2a3a58 100%); border-bottom: 1px solid rgba(255,255,255,0.15); }
+.hero-banner .logo-wrap svg{ display:block; }
+
+/* Utility: make section full-bleed without side gutters */
+.full-bleed{ width:100vw; margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw); }
+
+/* Hero typography responsiveness */
+@media (max-width: 575.98px){
+  .hero-banner h1{ font-size: 1.75rem; }
+  .hero-banner .lead{ font-size: 1rem; }
+}
+
+/* Portal cards */
+.card-portal{ border: 0; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+.portal-icon{ width: 56px; height: 56px; border-radius: 12px; display:flex; align-items:center; justify-content:center; font-size: 24px; }
+/* Align CTAs across cards */
+.card-portal .card-body{ display:flex; flex-direction:column; gap:.5rem; min-height:100%; }
+.card-portal .card-body .btn{ margin-top:auto; }
+/* Hover affordance */
+.card-portal{ position: relative; transition: transform .18s ease, box-shadow .18s ease; }
+.card-portal:hover{ transform: translateY(-4px); box-shadow: 0 16px 44px rgba(0,0,0,0.12); }
+.card-portal:hover .btn-outline-primary{ background: var(--app-primary); color:#fff; }
+.card-portal:hover .btn-outline-warning{ background: #f0ad4e; color:#212529; border-color:#f0ad4e; }
+.card-portal:hover .btn-success{ filter: brightness(1.05); }
+
+/* Navbar tweaks */
+.navbar-brand .badge{ width: 28px; height: 28px; display:inline-flex; align-items:center; justify-content:center; font-weight:700; }
+
+/* Section background to complement insurance theme */
+section + section{ background: var(--app-surface); }
+
+/* Buttons: align with brand */
+.btn-outline-primary{ border-color: var(--app-primary); color: var(--app-primary); }
+.btn-outline-primary:hover{ background: var(--app-primary); color:#fff; }
+
+/* Landing: fill remaining vertical space with surface background */
+.is-landing{ background: var(--app-surface); }
+.is-landing footer.footer{ background: var(--app-surface) !important; }
+
+/* Admin stat cards */
+.stat-card{ border-radius: 12px; }
+
+/* Tables: ensure they don’t overflow viewport */
+.table{ width: 100%; table-layout: auto; }
+.table td, .table th{ white-space: nowrap; }
+.table-responsive{ overflow-x: auto; }
+
+/* Utility: clamp long text to prevent pushing width */
+.text-break{ word-break: break-word; }
+
+/* Optional: grid layout only when a sidebar is present */
+@media (min-width: 992px) {
+  .has-sidebar .layout-grid {
+    display: grid;
+    grid-template-columns: var(--sidebar-w, 240px) 1fr;
+  }
+}
+@media (max-width: 991.98px) {
+  .has-sidebar .layout-grid {
+    display: block;
+  }
+}

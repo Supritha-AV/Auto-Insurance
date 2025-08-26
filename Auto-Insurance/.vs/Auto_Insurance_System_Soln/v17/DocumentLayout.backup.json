@@ -1,0 +1,765 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\admin\\claimshub.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\admin\\claimshub.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\admin\\policieshub.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\admin\\policieshub.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B566C93-5B54-48EC-8300-F94DDC380F40}|AutoInsuranceSystemAPI\\AutoInsuranceSystemAPI.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\autoinsurancesystemapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B566C93-5B54-48EC-8300-F94DDC380F40}|AutoInsuranceSystemAPI\\AutoInsuranceSystemAPI.csproj|solutionrelative:autoinsurancesystemapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|C:\\Users\\2421007\\Downloads\\Auto-Insurance\\SqlQueryPro.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:SqlQueryPro.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Migrations\\20250825124527_AutoInsuranceContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auto_Insurance_System\\Migrations\\20250825124527_AutoInsuranceContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Migrations\\20250825122547_AutoDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auto_Insurance_System\\Migrations\\20250825122547_AutoDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Migrations\\20250825120044_AutoDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auto_Insurance_System\\Migrations\\20250825120044_AutoDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B566C93-5B54-48EC-8300-F94DDC380F40}|AutoInsuranceSystemAPI\\AutoInsuranceSystemAPI.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\autoinsurancesystemapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B566C93-5B54-48EC-8300-F94DDC380F40}|AutoInsuranceSystemAPI\\AutoInsuranceSystemAPI.csproj|solutionrelative:autoinsurancesystemapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Migrations\\20250825115820_AutoDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auto_Insurance_System\\Migrations\\20250825115820_AutoDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\agent\\policycreate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\agent\\policycreate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\auth\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\auth\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\admin\\usershub.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\admin\\usershub.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\auth\\agentdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\auth\\agentdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\controllers\\agentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\controllers\\agentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B566C93-5B54-48EC-8300-F94DDC380F40}|AutoInsuranceSystemAPI\\AutoInsuranceSystemAPI.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\autoinsurancesystemapi\\controllers\\policiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B566C93-5B54-48EC-8300-F94DDC380F40}|AutoInsuranceSystemAPI\\AutoInsuranceSystemAPI.csproj|solutionrelative:autoinsurancesystemapi\\controllers\\policiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\services\\policyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\services\\policyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\services\\claimservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\services\\claimservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\services\\supportticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\services\\supportticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\models\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\models\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\models\\policy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\models\\policy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\admin\\tickets.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\admin\\tickets.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\data\\autoinsurancedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\data\\autoinsurancedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\interfaces\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\interfaces\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\home\\landing.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\home\\landing.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\auth\\customerdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\auth\\customerdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\wwwroot\\favicon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\wwwroot\\favicon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|c:\\users\\2421007\\downloads\\auto-insurance\\auto_insurance_system\\migrations\\20250825124659_autoinsurancecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B6A4D34-72D0-4AAF-9B1A-63E3D5DBB14A}|Auto_Insurance_System\\Auto_Insurance_System.csproj|solutionrelative:auto_insurance_system\\migrations\\20250825124659_autoinsurancecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 327,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAswEwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T12:16:05.733Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClaimsHub.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Admin\\ClaimsHub.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Admin\\ClaimsHub.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Admin\\ClaimsHub.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Admin\\ClaimsHub.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACYAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T13:02:02.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "20250825124659_AutoInsuranceContext.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Migrations\\20250825124659_AutoInsuranceContext.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Migrations\\20250825124659_AutoInsuranceContext.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Migrations\\20250825124659_AutoInsuranceContext.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Migrations\\20250825124659_AutoInsuranceContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T12:47:00.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\appsettings.json",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\appsettings.json",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\appsettings.json",
+              "RelativeToolTip": "Auto_Insurance_System\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-20T18:08:32.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SqlQueryPro.sql",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\SqlQueryPro.sql",
+              "RelativeDocumentMoniker": "SqlQueryPro.sql",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\SqlQueryPro.sql",
+              "RelativeToolTip": "SqlQueryPro.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-08-23T12:24:50.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PoliciesHub.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Admin\\PoliciesHub.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Admin\\PoliciesHub.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Admin\\PoliciesHub.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Admin\\PoliciesHub.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-20T19:55:52.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20250825124527_AutoInsuranceContext.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Migrations\\20250825124527_AutoInsuranceContext.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Migrations\\20250825124527_AutoInsuranceContext.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Migrations\\20250825124527_AutoInsuranceContext.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Migrations\\20250825124527_AutoInsuranceContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T12:45:28.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\AutoInsuranceSystemAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "AutoInsuranceSystemAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\AutoInsuranceSystemAPI\\appsettings.json",
+              "RelativeToolTip": "AutoInsuranceSystemAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-23T08:39:33.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20250825122547_AutoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Migrations\\20250825122547_AutoDbContext.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Migrations\\20250825122547_AutoDbContext.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Migrations\\20250825122547_AutoDbContext.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Migrations\\20250825122547_AutoDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T12:25:48.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20250825120044_AutoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Migrations\\20250825120044_AutoDbContext.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Migrations\\20250825120044_AutoDbContext.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Migrations\\20250825120044_AutoDbContext.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Migrations\\20250825120044_AutoDbContext.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T12:00:44.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20250825115820_AutoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Migrations\\20250825115820_AutoDbContext.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Migrations\\20250825115820_AutoDbContext.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Migrations\\20250825115820_AutoDbContext.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Migrations\\20250825115820_AutoDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T11:58:21.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\AutoInsuranceSystemAPI\\Program.cs",
+              "RelativeDocumentMoniker": "AutoInsuranceSystemAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\AutoInsuranceSystemAPI\\Program.cs",
+              "RelativeToolTip": "AutoInsuranceSystemAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T08:39:51.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UsersService.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Services\\UsersService.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Services\\UsersService.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Services\\UsersService.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Services\\UsersService.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAkwFMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T07:14:41.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Program.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Program.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Program.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T04:17:36.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T10:18:29.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PolicyCreate.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Agent\\PolicyCreate.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Agent\\PolicyCreate.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Agent\\PolicyCreate.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Agent\\PolicyCreate.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-23T17:19:05.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AdminDashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Auth\\AdminDashboard.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Auth\\AdminDashboard.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Auth\\AdminDashboard.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Auth\\AdminDashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-23T17:33:06.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AgentController.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Controllers\\AgentController.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Controllers\\AgentController.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Controllers\\AgentController.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Controllers\\AgentController.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAiwHAAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T17:25:31.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UsersHub.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Admin\\UsersHub.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Admin\\UsersHub.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Admin\\UsersHub.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Admin\\UsersHub.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T04:35:49.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Users.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Admin\\Users.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Admin\\Users.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Admin\\Users.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Admin\\Users.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T04:38:53.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T16:37:07.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Auto_Insurance_System\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-23T18:05:34.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AgentDashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Auth\\AgentDashboard.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Auth\\AgentDashboard.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Auth\\AgentDashboard.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Auth\\AgentDashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-17T10:52:33.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PoliciesController.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\AutoInsuranceSystemAPI\\Controllers\\PoliciesController.cs",
+              "RelativeDocumentMoniker": "AutoInsuranceSystemAPI\\Controllers\\PoliciesController.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\AutoInsuranceSystemAPI\\Controllers\\PoliciesController.cs",
+              "RelativeToolTip": "AutoInsuranceSystemAPI\\Controllers\\PoliciesController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCMAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T12:44:12.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAwG0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-23T11:08:38.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PolicyService.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Services\\PolicyService.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Services\\PolicyService.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Services\\PolicyService.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Services\\PolicyService.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T10:37:37.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAuwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T07:19:26.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Services\\PaymentService.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Services\\PaymentService.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Services\\PaymentService.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Services\\PaymentService.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T08:49:11.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Models\\Users.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Models\\Users.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Models\\Users.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Models\\Users.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T07:14:47.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ClaimService.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Services\\ClaimService.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Services\\ClaimService.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Services\\ClaimService.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Services\\ClaimService.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowDgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T12:50:49.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SupportTicketService.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Services\\SupportTicketService.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Services\\SupportTicketService.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Services\\SupportTicketService.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Services\\SupportTicketService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwA4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T08:17:09.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Claim.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Models\\Claim.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Models\\Claim.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Models\\Claim.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Models\\Claim.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T07:14:34.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Policy.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Models\\Policy.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Models\\Policy.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Models\\Policy.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Models\\Policy.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAkwAgAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T07:14:29.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Tickets.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Admin\\Tickets.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Admin\\Tickets.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Admin\\Tickets.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Admin\\Tickets.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-20T18:35:10.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AutoInsuranceDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Data\\AutoInsuranceDbContext.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Data\\AutoInsuranceDbContext.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Data\\AutoInsuranceDbContext.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Data\\AutoInsuranceDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T17:35:26.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-19T09:55:22.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAgwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-17T10:58:57.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "IUsersService.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Interfaces\\IUsersService.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Interfaces\\IUsersService.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Interfaces\\IUsersService.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Interfaces\\IUsersService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T09:50:47.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T09:20:37.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Auth\\Register.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Auth\\Register.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Auth\\Register.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Auth\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBAAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-14T09:45:06.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Auto_Insurance_System\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-14T08:48:48.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Auto_Insurance_System\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAgwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T07:14:53.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Landing.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Home\\Landing.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Home\\Landing.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Home\\Landing.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Home\\Landing.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-14T08:28:30.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "CustomerDashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Auth\\CustomerDashboard.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Auth\\CustomerDashboard.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Auth\\CustomerDashboard.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Auth\\CustomerDashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-17T10:53:26.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "favicon.ico -  [English (United States)] - Icon [32x32, 32 bit, BMP]",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\wwwroot\\favicon.ico",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\wwwroot\\favicon.ico",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\wwwroot\\favicon.ico -  [English (United States)] - Icon [32x32, 32 bit, BMP]",
+              "RelativeToolTip": "Auto_Insurance_System\\wwwroot\\favicon.ico -  [English (United States)] - Icon [32x32, 32 bit, BMP]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2025-08-14T08:24:44.103Z",
+              "EditorCaption": " -  [English (United States)] - Icon [32x32, 32 bit, BMP]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Auto_Insurance_System\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\2421007\\Downloads\\Auto-Insurance\\Auto_Insurance_System\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Auto_Insurance_System\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-14T08:33:02.554Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

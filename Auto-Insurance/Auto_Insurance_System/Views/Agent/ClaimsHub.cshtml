@@ -1,0 +1,52 @@
+@{
+	ViewData["Title"] = "Agent • Claims Hub";
+}
+
+<div class="container py-4">
+	<div class="d-flex justify-content-between align-items-center mb-3">
+		<h2 class="mb-0">Claims</h2>
+		<a class="btn btn-outline-secondary" asp-controller="Auth" asp-action="AgentDashboard">Dashboard</a>
+	</div>
+
+	<div class="row g-4 mt-1">
+		<div class="col-md-3">
+			<a class="text-decoration-none" asp-action="ClaimsAll">
+				<div class="tile card shadow-sm border-0 h-100">
+					<div class="card-body d-flex flex-column justify-content-center align-items-start">
+						<div class="icon-circle bg-primary text-white mb-3"><i class="bi bi-list"></i></div>
+						<div class="fs-5 fw-bold">All Claims</div>
+						<div class="text-muted small">Browse and search</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="col-md-3">
+			<a class="text-decoration-none" asp-action="ClaimDetails">
+				<div class="tile card shadow-sm border-0 h-100">
+					<div class="card-body d-flex flex-column justify-content-center align-items-start">
+						<div class="icon-circle bg-info text-white mb-3"><i class="bi bi-search"></i></div>
+						<div class="fs-5 fw-bold">Get Claim Details</div>
+						<div class="text-muted small">Find by id</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="col-md-3">
+			<a class="text-decoration-none" asp-action="ClaimSubmit">
+				<div class="tile card shadow-sm border-0 h-100">
+					<div class="card-body d-flex flex-column justify-content-center align-items-start">
+						<div class="icon-circle bg-success text-white mb-3"><i class="bi bi-upload"></i></div>
+						<div class="fs-5 fw-bold">Submit Claim</div>
+						<div class="text-muted small">Create new claim</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<style>
+.icon-circle{ width:46px;height:46px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center; }
+.tile{ transition:transform .15s ease, box-shadow .15s ease; }
+.tile:hover{ transform:translateY(-2px); box-shadow:0 .75rem 1rem rgba(0,0,0,.08)!important; }
+</style> 

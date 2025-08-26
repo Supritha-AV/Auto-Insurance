@@ -1,0 +1,77 @@
+@model IEnumerable<Auto_Insurance_System.Models.SupportTicket>
+@{
+    ViewData["Title"] = "Agent • Tickets";
+}
+
+<div class="container">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="mb-0">Support Tickets</h2>
+        <a class="btn btn-outline-secondary" asp-action="TicketsHub">Back</a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="row g-2 mb-3">
+                <div class="col-md-3">
+                    <select id="ticketStatusFilter" class="form-select">
+                        <option value="">All Statuses</option>
+                        <option value="OPEN">Open</option>
+                        <option value="RESOLVED">Resolved</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input id="ticketSearch" class="form-control" placeholder="Search by ticket id, user id or description" />
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped align-middle" id="ticketsTable">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Ticket Id</th>
+                            <th>User Id</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Created</th>
+                            <th>Resolved</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var t in Model)
+                    {
+                        <tr data-status="@t.TicketStatus">
+                            <td>@t.TicketId</td>
+                            <td>@t.UserId</td>
+                            <td>@t.IssueDescription</td>
+                            <td><span class="badge @(t.TicketStatus == TicketStatus.OPEN ? "bg-danger" : "bg-success")">@t.TicketStatus</span></td>
+                            <td>@t.CreatedDate.ToString("dd-MMM-yyyy")</td>
+                            <td>@(t.ResolvedDate.HasValue ? t.ResolvedDate.Value.ToString("dd-MMM-yyyy") : "-")</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+<script>
+    const statusFilter = document.getElementById('ticketStatusFilter');
+    const search = document.getElementById('ticketSearch');
+    const table = document.getElementById('ticketsTable');
+
+    function applyFilters() {
+        const status = statusFilter.value;
+        const q = search.value.toLowerCase();
+        Array.from(table.querySelectorAll('tbody tr')).forEach(r => {
+            const matchStatus = !status || r.getAttribute('data-status') === status;
+            const text = r.innerText.toLowerCase();
+            const matchText = text.includes(q);
+            r.style.display = matchStatus && matchText ? '' : 'none';
+        });
+    }
+    statusFilter.addEventListener('change', applyFilters);
+    search.addEventListener('input', applyFilters);
+</script>
+} 

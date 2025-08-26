@@ -1,0 +1,249 @@
+@{
+    ViewData["Title"] = "Admin Console";
+}
+
+<div class="container py-4">
+    <h2 class="mb-3">Admin Console</h2>
+    @await Html.PartialAsync("~/Views/Shared/_AdminStats.cshtml")
+
+    <div class="row g-3">
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm border-0" role="button" data-bs-toggle="modal" data-bs-target="#userModal">
+                <div class="card-body">
+                    <div class="fs-5 fw-bold mb-1">User Management</div>
+                    <div class="text-muted small">Create, update, assign roles, delete</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm border-0" role="button" data-bs-toggle="modal" data-bs-target="#policyModal">
+                <div class="card-body">
+                    <div class="fs-5 fw-bold mb-1">Policy Oversight</div>
+                    <div class="text-muted small">Create, update, delete, fetch by id</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm border-0" role="button" data-bs-toggle="modal" data-bs-target="#claimModal">
+                <div class="card-body">
+                    <div class="fs-5 fw-bold mb-1">Claim Supervision</div>
+                    <div class="text-muted small">Submit, approve/reject, details</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm border-0" role="button" data-bs-toggle="modal" data-bs-target="#ticketModal">
+                <div class="card-body">
+                    <div class="fs-5 fw-bold mb-1">Ticket Management</div>
+                    <div class="text-muted small">Resolve support tickets</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a class="btn btn-outline-secondary me-2" asp-action="Users">Open Users</a>
+        <a class="btn btn-outline-success me-2" asp-action="Policies">Open Policies</a>
+        <a class="btn btn-outline-warning me-2" asp-action="Claims">Open Claims</a>
+        <a class="btn btn-outline-info me-2" asp-action="Payments">Open Payments</a>
+        <a class="btn btn-outline-danger" asp-action="Tickets">Open Tickets</a>
+    </div>
+</div>
+
+<!-- User Modal -->
+<div class="modal fade" id="userModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">User Management</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="userForm" class="row g-2">
+            <input type="hidden" name="UserId" id="UserId" />
+            <div class="col-md-4"><input class="form-control" name="Username" placeholder="Username" required></div>
+            <div class="col-md-4"><input class="form-control" type="email" name="Email" placeholder="Email" required></div>
+            <div class="col-md-4"><input class="form-control" type="password" name="Password" placeholder="Password"></div>
+            <div class="col-md-4">
+                <select class="form-select" name="Role" required>
+                    <option value="ADMIN">ADMIN</option>
+                    <option value="AGENT">AGENT</option>
+                    <option value="CUSTOMER">CUSTOMER</option>
+                </select>
+            </div>
+        </form>
+        <div class="small text-muted mt-2">Leave password empty to keep existing when updating.</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" id="deleteUserBtn">Delete</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="saveUserBtn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Policy Modal -->
+<div class="modal fade" id="policyModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Policy Oversight</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body">
+        <form id="policyForm" class="row g-2">
+            <input type="hidden" name="PolicyId" id="PolicyId" />
+            <div class="col-md-4"><input class="form-control" name="PolicyNumber" placeholder="Policy Number" required></div>
+            <div class="col-md-8"><input class="form-control" name="VehicleDetails" placeholder="Vehicle Details" required></div>
+            <div class="col-md-4"><input class="form-control" type="number" step="0.01" name="CoverageAmount" placeholder="Coverage Amount" required></div>
+            <div class="col-md-4"><input class="form-control" name="CoverageType" placeholder="Coverage Type" required></div>
+            <div class="col-md-4"><input class="form-control" type="number" step="0.01" name="PremiumAmount" placeholder="Premium Amount" required></div>
+            <div class="col-md-6"><input class="form-control" type="date" name="StartDate" required></div>
+            <div class="col-md-6"><input class="form-control" type="date" name="EndDate" required></div>
+            <div class="col-md-4">
+                <select class="form-select" name="PolicyStatus" required>
+                    <option value="ACTIVE">ACTIVE</option>
+                    <option value="INACTIVE">INACTIVE</option>
+                    <option value="RENEWED">RENEWED</option>
+                </select>
+            </div>
+        </form>
+        <div class="input-group mt-3">
+            <input id="policyLookupId" type="number" class="form-control" placeholder="Get Policy By Id">
+            <button id="policyLookupBtn" class="btn btn-outline-secondary">Fetch</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" id="deletePolicyBtn">Delete</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="savePolicyBtn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Claim Modal -->
+<div class="modal fade" id="claimModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Claim Supervision</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body">
+        <form id="claimForm" class="row g-2">
+            <input type="hidden" name="ClaimId" id="ClaimId" />
+            <div class="col-12"><input class="form-control" type="number" name="PolicyId" placeholder="Policy Id" required></div>
+            <div class="col-12"><input class="form-control" type="number" step="0.01" name="ClaimAmount" placeholder="Amount" required></div>
+            <div class="col-12"><input class="form-control" type="date" name="ClaimDate" required></div>
+            <div class="col-12">
+                <select class="form-select" name="ClaimStatus" required>
+                    <option value="OPEN">OPEN</option>
+                    <option value="APPROVED">APPROVED</option>
+                    <option value="REJECTED">REJECTED</option>
+                </select>
+            </div>
+            <div class="col-12"><input class="form-control" type="number" name="AdjusterId" placeholder="Adjuster Id" required></div>
+        </form>
+        <div class="d-flex gap-2 mt-3">
+            <button id="approveClaimBtn" class="btn btn-success flex-fill">Approve</button>
+            <button id="rejectClaimBtn" class="btn btn-danger flex-fill">Reject</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="submitClaimBtn">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ticket Modal -->
+<div class="modal fade" id="ticketModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Support Ticket Management</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body">
+        <div class="input-group mb-2">
+            <input id="ticketId" class="form-control" type="number" placeholder="Ticket Id" />
+        </div>
+        <button id="resolveTicketBtn" class="btn btn-success w-100">Resolve</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts{
+<script>
+// User ops
+const saveUserBtn=document.getElementById('saveUserBtn');
+saveUserBtn.addEventListener('click', async ()=>{
+  const form=new FormData(document.getElementById('userForm'));
+  const userId=form.get('UserId');
+  const url=userId?'/Admin/AdminUpdateUser':'/Admin/AdminCreateUser';
+  const res=await fetch(url,{method:'POST',body:form});
+  alert(res.ok?'Saved':'Failed');
+});
+
+document.getElementById('deleteUserBtn').addEventListener('click', async ()=>{
+  const id=document.getElementById('UserId').value;
+  if(!id) return alert('Enter UserId');
+  const form=new FormData(); form.append('userId', id);
+  const res=await fetch('/Admin/AdminDeleteUser',{method:'POST', body:form});
+  alert(res.ok?'Deleted':'Failed');
+});
+
+// Policy ops
+const savePolicyBtn=document.getElementById('savePolicyBtn');
+savePolicyBtn.addEventListener('click', async ()=>{
+  const form=new FormData(document.getElementById('policyForm'));
+  const id=form.get('PolicyId');
+  const url=id?'/Admin/AdminUpdatePolicy':'/Admin/AdminCreatePolicy';
+  const res=await fetch(url,{method:'POST',body:form});
+  alert(res.ok?'Saved':'Failed');
+});
+
+document.getElementById('deletePolicyBtn').addEventListener('click', async ()=>{
+  const id=document.getElementById('PolicyId').value; if(!id) return alert('Enter PolicyId');
+  const form=new FormData(); form.append('policyId', id);
+  const res=await fetch('/Admin/AdminDeletePolicy',{method:'POST', body:form});
+  alert(res.ok?'Deleted':'Failed');
+});
+
+document.getElementById('policyLookupBtn').addEventListener('click', async ()=>{
+  const id=document.getElementById('policyLookupId').value; if(!id) return;
+  const res=await fetch('/Admin/AdminGetPolicy?id='+encodeURIComponent(id));
+  if(!res.ok){ alert('Not found'); return; }
+  const p=await res.json();
+  const f=document.getElementById('policyForm');
+  f.PolicyId.value=p.policyId||p.PolicyId; f.PolicyNumber.value=p.policyNumber||p.PolicyNumber; f.VehicleDetails.value=p.vehicleDetails||p.VehicleDetails;
+  f.CoverageAmount.value=p.coverageAmount||p.CoverageAmount; f.CoverageType.value=p.coverageType||p.CoverageType; f.PremiumAmount.value=p.premiumAmount||p.PremiumAmount;
+  f.StartDate.value=(p.startDate||p.StartDate).substring(0,10); f.EndDate.value=(p.endDate||p.EndDate).substring(0,10); f.PolicyStatus.value=p.policyStatus||p.PolicyStatus;
+});
+
+// Claim ops
+const submitClaimBtn=document.getElementById('submitClaimBtn');
+submitClaimBtn.addEventListener('click', async ()=>{
+  const form=new FormData(document.getElementById('claimForm'));
+  const res=await fetch('/Admin/AdminSubmitClaim',{method:'POST',body:form});
+  alert(res.ok?'Submitted':'Failed');
+});
+
+document.getElementById('approveClaimBtn').addEventListener('click', ()=>updateClaimStatus('APPROVED'));
+document.getElementById('rejectClaimBtn').addEventListener('click', ()=>updateClaimStatus('REJECTED'));
+async function updateClaimStatus(status){
+  const id=document.getElementById('ClaimId').value; const adjuster=document.querySelector('#claimForm [name="AdjusterId"]').value;
+  if(!id) return alert('Enter ClaimId (if updating existing).');
+  const form=new FormData(); form.append('claimId', id); form.append('status', status); form.append('adjusterId', adjuster);
+  const res=await fetch('/Admin/AdminUpdateClaimStatus',{method:'POST', body:form});
+  alert(res.ok?'Updated':'Failed');
+}
+
+// Ticket ops
+
+document.getElementById('resolveTicketBtn').addEventListener('click', async ()=>{
+  const ticketId=document.getElementById('ticketId').value; if(!ticketId) return alert('Enter ticket id');
+  const form=new FormData(); form.append('ticketId', ticketId);
+  const res=await fetch('/Admin/AdminResolveTicket',{method:'POST', body:form});
+  alert(res.ok?'Resolved':'Failed');
+});
+</script>
+} 

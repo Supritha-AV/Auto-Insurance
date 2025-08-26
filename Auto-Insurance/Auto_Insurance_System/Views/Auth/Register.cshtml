@@ -1,0 +1,173 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<div class="container mt-5">
+@* Success Message Block *@
+    @{
+        var successMessage = ViewBag.SuccessMessage as string;
+        var triggerRedirect = ViewBag.TriggerRedirect as bool?;
+    }
+
+    @if (!string.IsNullOrEmpty(successMessage))
+    {
+        <div class="alert alert-success text-center mt-4">
+            <i class="fas fa-check-circle text-success me-2"></i>
+            @successMessage
+        </div>
+
+        <script>
+            setTimeout(function () {
+                window.location.href = '@Url.Action("Login", "Auth")';
+            }, 3000);
+        </script>
+    }
+    <h2 class="text-center mb-4">Choose Your Role to Register</h2>
+
+    <div class="row text-center mb-5">
+        <!-- Admin Card -->
+        <div class="col-md-4">
+            <div class="role-card admin-card" onclick="showForm('ADMIN')">
+                <i class="fas fa-user-shield fa-2x mb-2 text-danger"></i>
+                <h4>Admin</h4>
+                <p>Manage users, policies, and system settings.</p>
+
+                <div class="form-container" id="form-ADMIN" style="display:none;">
+                    <form asp-action="Register" method="post">
+                        <input type="hidden" name="Role" value="ADMIN" />
+                        <input type="text" name="Username" class="form-control mb-2" placeholder="Username" required />
+                        <input type="password" name="Password" class="form-control mb-2" placeholder="Password" required />
+                        <input type="email" name="Email" class="form-control mb-3" placeholder="Email" required />
+                        <button type="submit" class="btn btn-danger w-100">Register as Admin</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agent Card -->
+        <div class="col-md-4">
+            <div class="role-card agent-card" onclick="showForm('AGENT')">
+                <i class="fas fa-user-tie fa-2x mb-2 text-warning"></i>
+                <h4>Agent</h4>
+                <p>Handle claims, assist customers, and track policies.</p>
+
+                <div class="form-container" id="form-AGENT" style="display:none;">
+                    <form asp-action="Register" method="post">
+                        <input type="hidden" name="Role" value="AGENT" />
+                        <input type="text" name="Username" class="form-control mb-2" placeholder="Username" required />
+                        <input type="password" name="Password" class="form-control mb-2" placeholder="Password" required />
+                        <input type="email" name="Email" class="form-control mb-3" placeholder="Email" required />
+                        <button type="submit" class="btn btn-warning w-100 text-dark">Register as Agent</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Card -->
+        <div class="col-md-4">
+            <div class="role-card customer-card" onclick="showForm('CUSTOMER')">
+                <i class="fas fa-user fa-2x mb-2 text-success"></i>
+                <h4>Customer</h4>
+                <p>View policies, file claims, and manage your account.</p>
+
+                <div class="form-container" id="form-CUSTOMER" style="display:none;">
+                    <form asp-action="Register" method="post">
+                        <input type="hidden" name="Role" value="CUSTOMER" />
+                        <input type="text" name="Username" class="form-control mb-2" placeholder="Username" required />
+                        <input type="password" name="Password" class="form-control mb-2" placeholder="Password" required />
+                        <input type="email" name="Email" class="form-control mb-3" placeholder="Email" required />
+                        <button type="submit" class="btn btn-success w-100">Register as Customer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Styling -->
+<style>
+    .role-card {
+        border: 2px solid #ccc;
+        border-radius: 15px;
+        padding: 25px;
+        min-height: 320px;
+        transition: all 0.3s ease;
+        position: relative;
+        background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        cursor: pointer;
+    }
+
+        .role-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+    .admin-card {
+        border-left: 6px solid #dc3545;
+    }
+
+    .agent-card {
+        border-left: 6px solid #ffc107;
+    }
+
+    .customer-card {
+        border-left: 6px solid #28a745;
+    }
+
+    .form-container {
+        margin-top: 20px;
+        animation: fadeIn 0.4s ease-in-out;
+    }
+
+    body {
+        background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+    }
+
+
+    .form-control {
+        border-radius: 8px;
+    }
+
+    .btn {
+        border-radius: 8px;
+        font-weight: bold;
+    }
+</style>
+
+<style>
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .form-container {
+        animation: fadeIn 0.4s ease-in-out;
+    }
+</style>
+
+
+<!-- Script -->
+<script>
+    function showForm(role) {
+        // Hide all forms
+        document.querySelectorAll('.form-container').forEach(form => form.style.display = 'none');
+
+        // Show selected form
+        document.getElementById(`form-${role}`).style.display = 'block';
+
+        // Scroll to selected card
+        const card = document.querySelector(`.${role.toLowerCase()}-card`);
+        window.scrollTo({ top: card.offsetTop, behavior: 'smooth' });
+    }
+</script>
